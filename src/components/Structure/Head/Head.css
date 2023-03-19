@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    background-color: #333;
+    font-family: sans-serif;
+}
+
+img {
+    max-width: 100%; /*Para que no se desborde le decimos que ocupe el 100% del contenedor.*/
+}
+
+.toggle-menu {
+    width: 40px; /*Determinamos el tamaño de la imagen con el contenedor*/
+    position:absolute; /*posicionamos el menu en el contenedor de manera fija*/
+    top: 0.5em; /*indicamos como se desplaza en el contenedor desde la parte superior*/
+    right: 1.5em; /*indicamos cuanto se desplaza desde la derecha de la pantalla*/
+    cursor: pointer; /*Esta propiedad permite que el cursor cambie cuando pase sobre la imagen.*/
+    /*filter: invert(1); Este filtro cambia el color de blanco a negro y viceversa*/
+}
+
+@media screen and (min-width: 760px) {
+    .toggle-menu{
+        display:none;
+    }   
+}
+
+.main-menu {
+    list-style: none; /*Esto es para quitar el estilo a las biñetas*/
+    margin: 0;
+
+    display:flex; /*Përmite que los elementos sean manipulables (Cambiar de columna a fila, entre otros), recordar que son los elementos que estan dentro del menu*/
+    flex-direction: column; /*cambia la ubicación de los elementos a columna*/
+    align-items: center; /*Centra los elementos del menu*/
+    background-color: #5b73a5;
+    /*Esta parte es para ocultar el menu si no se a presionado la imagen del menu
+    por tal motivo, trasladamos la imagena -100 para que se oculte y no se vea en la pantalla.*/
+    transform: translateY(-200%);
+}
+
+/*Esta es una clase que creamos, que se llama --show que depende del menu
+con esta buscaremos que el menu se muestre cuando programemos desde javascript el contenedor que contiene
+la imagen del menu*/
+.main-menu--show {
+    list-style: none; /*Esto es para quitar el estilo a las biñetas*/
+    margin: 0;
+
+    display:flex; /*Përmite que los elementos sean manipulables (Cambiar de columna a fila, entre otros), recordar que son los elementos que estan dentro del menu*/
+    flex-direction: column; /*cambia la ubicación de los elementos a columna*/
+    align-items: center; /*Centra los elementos del menu*/
+    background-color: #5b73a5;
+    transform: traslateY(0%); /*Este traslate lo que indica es que el menu va a quedar en la posición por defecto, se va a ver el menu.*/
+}
+
+@media screen and (min-width: 760px) {
+    .main-menu{
+        flex-direction: row; /*Cambiamos la ubicación de los elementos a fila, cuando la pantalla cambia sus dimensiones.*/
+    }
+    
+}
+
+.main-menu_item{
+    padding: 1em; /*Recordar que un 1em son 16px o la proporcion al contenedor, separamos los elementos li*/
+}
+
+.main-menu_link {
+    color: white;
+    text-transform: uppercase; /*Pasar a mayusculas las letras*/
+    text-decoration: none; /*Esto es para quitar el underline que tiene la etiqueta a*/
+}
