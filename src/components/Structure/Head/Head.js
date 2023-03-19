@@ -24,16 +24,15 @@ class Head extends React.Component{
 
         return(
             <div>
-
-                <header>
-                    <div>
+                    <div class="nav-padre">
+                    <header>
                         <nav class="main-nav">
                             <div onClick={this.toggleMenu} class="toggle-menu"> {/*Este contendor va almacenar la imagen del menu, asi
                             mismo nos permitira delimitar el tamaño que tendra la imagen dentro del contendor.*/ }
                                 <img src={imagenMenu} alt=""/>
                             </div>
-                            <a href="index.html"><span>Pagina profe</span></a>
-                            <div>
+                            <a href="index.html" class="name"><span>Pagina profe</span></a>
+                            <div class="nav">
                                 <ul class={this.state.mainMenu ? 'main-menu':'main-menu--show'}>
                                     <li class="main-menu_item">
                                         <a href="Home.html" class="main-menu_link">Home</a>
@@ -50,8 +49,9 @@ class Head extends React.Component{
                                 </ul>
                             </div>
                         </nav>
+                        </header>
                     </div>
-                </header>
+                
                 
             </div>
             
