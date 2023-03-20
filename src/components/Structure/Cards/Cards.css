@@ -1,3 +1,11 @@
 .filas{
     margin: 2em 0 2em 0 ;
 }
+.cardss{
+    height: 100%;
+    height: 30vh;
+    object-fit: contain;
+}
+.card-content{
+    text-align: center;
+}

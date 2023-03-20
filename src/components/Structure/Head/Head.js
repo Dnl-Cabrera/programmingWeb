@@ -38,13 +38,13 @@ class Head extends React.Component{
                                         <a href="Home.html" class="main-menu_link">Home</a>
                                     </li>
                                     <li class="main-menu_item">
-                                        <a href="about.html" class="main-menu_link">About</a>
+                                        <a href="about.html" class="main-menu_link">Grados</a>
                                     </li>
                                     <li class="main-menu_item">
-                                        <a href="Course.html" class="main-menu_link">Course</a>
+                                        <a href="Course.html" class="main-menu_link">Cursos</a>
                                     </li>
                                     <li class="main-menu_item">
-                                        <a href="ContacUs.html" class="main-menu_link">Contac Us</a>
+                                        <a href="ContacUs.html" class="main-menu_link">Calificaciones</a>
                                     </li>
                                 </ul>
                             </div>

@@ -1,29 +1,15 @@
 import React from "react"
-import Head from "./components/Structure/Head/Head";
-import Footer from "./components/Structure/Footer/Footer";
-import Section from "./components/Structure/Section/Section";
-import Cards from "./components/Structure/Cards/Cards";
+//css
 import "./App.css"
+//import template
+import Home from "./components/Template/Home/Home";
 
 class App extends React.Component{
 
   render(){
     return(
       <div>
-        <div class="background">
-          <div class="nav-padre">
-            <Head/>
-            <Section/>
-            <Cards/>
-            <div class="footer-padre">
-              <Footer></Footer>
-            </div>
-            
-          </div>
-          
-          
-          
-        </div>
+        <Home/>
       </div>
     )
     
