@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 import "./Head.css"
 import imagenMenu from "../../../images/menu.png"
 
@@ -24,7 +24,7 @@ class Head extends React.Component{
 
         return(
             <div>
-                    <div class="nav-padre">
+                    <div class="nav-father">
                     <header>
                         <nav class="main-nav">
                             <div onClick={this.toggleMenu} class="toggle-menu"> {/*Este contendor va almacenar la imagen del menu, asi

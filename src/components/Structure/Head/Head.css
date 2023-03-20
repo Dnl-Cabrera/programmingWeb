@@ -65,7 +65,7 @@ la imagen del menu*/
     .main-menu{ 
         font-size: 1.3em;
         transform: translateY(0%);
-        justify-content: end; /*Para alinear contenidos.*/
+        justify-content: end !important; /*Para alinear contenidos.*/
     }
     .main-menu--show{
         font-size: 1.3em;
@@ -102,5 +102,9 @@ la imagen del menu*/
 
 .main-nav{
     padding: 2em 8em 2em 8em;
+}
+
+.nav-father{
+    position:static;
 }
 
