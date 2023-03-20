@@ -32,7 +32,7 @@ class Head extends React.Component{
                                 <img src={imagenMenu} alt=""/>
                             </div>
                             <a href="index.html" class="name"><span>Pagina profe</span></a>
-                            <div class="nav">
+                            <div class="navv">
                                 <ul class={this.state.mainMenu ? 'main-menu':'main-menu--show'}>
                                     <li class="main-menu_item">
                                         <a href="Home.html" class="main-menu_link">Home</a>

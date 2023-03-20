@@ -1,6 +1,6 @@
 import React from "react";
-import {FaFacebook,FaLinkedin,FaGithub,FaMailBulk} from 'react-icons/fa'
-import {TfiEmail} from 'react-icons/tfi'
+import {FaFacebook,FaLinkedin,FaGithub} from 'react-icons/fa' //Agregamos libreria para importar icons
+import {TfiEmail} from 'react-icons/tfi' //Tener presente que cada icon tiene su propia ubicación.
 import {SlPhone} from 'react-icons/sl'
 import "./Footer.css"
 
@@ -16,7 +16,7 @@ class Footer extends React.Component {
                             <li Style="padding-bottom:1.5%"><strong Style="font-size:1.3em">Creado por:</strong></li>
                             <li>Carlos Eduardo Cabrera Ardila</li>
                             <li Style="font-style: italic;">Licenciado en Electronica de la Universidad Pedagogica Nacional</li>
-                            <li Style="font-style: italic; ">Master en Ingenieria - Automatización Industrial de la Universidad Nacional Sede Bogotá</li>
+                            <li Style="font-style: italic; ">Master en Ingenieria - Automatización Industrial de la Universidad Nacional de Colombia Sede Bogotá</li>
                         </ul>
                     </div>
                     <div class="item2">

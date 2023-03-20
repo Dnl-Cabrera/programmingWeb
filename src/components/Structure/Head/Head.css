@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: #333;
+    background-color: #333 !important;
     font-family: sans-serif;
 }
 
@@ -22,7 +22,7 @@ img {
     }   
 }
 
-.nav{
+.navv{
     width: 100%;
     
 }
@@ -104,7 +104,4 @@ la imagen del menu*/
     padding: 2em 8em 2em 8em;
 }
 
-.nav-father{
-    position:static;
-}
 

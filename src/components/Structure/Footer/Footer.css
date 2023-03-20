@@ -1,6 +1,6 @@
 .wrapper{
     width: 100%;
-    position:static;
+    position:static; /*Static es para mantener las dimensiones del contenedor en la pagina.*/
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(100%,1fr));
     background-color: #5b73a5;;
