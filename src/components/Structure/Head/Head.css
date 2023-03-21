@@ -1,107 +1,102 @@
 body {
-    margin: 0;
-    background-color: #333 !important;
-    font-family: sans-serif;
+  margin: 0;
+  background-color: #333 !important;
+  font-family: sans-serif;
 }
 
 img {
-    max-width: 100%; /*Para que no se desborde le decimos que ocupe el 100% del contenedor.*/
+  max-width: 100%; /*Para que no se desborde le decimos que ocupe el 100% del contenedor.*/
 }
 .toggle-menu {
-    width: 40px; /*Determinamos el tamaño de la imagen con el contenedor*/
-    position:absolute; /*posicionamos el menu en el contenedor de manera fija*/
-    top: 2.5em; /*indicamos como se desplaza en el contenedor desde la parte superior*/
-    right: 1.5em; /*indicamos cuanto se desplaza desde la derecha de la pantalla*/
-    cursor: pointer; /*Esta propiedad permite que el cursor cambie cuando pase sobre la imagen.*/
-    /*filter: invert(1); Este filtro cambia el color de blanco a negro y viceversa*/
+  width: 40px; /*Determinamos el tamaño de la imagen con el contenedor*/
+  position: absolute; /*posicionamos el menu en el contenedor de manera fija*/
+  top: 2.5em; /*indicamos como se desplaza en el contenedor desde la parte superior*/
+  right: 1.5em; /*indicamos cuanto se desplaza desde la derecha de la pantalla*/
+  cursor: pointer; /*Esta propiedad permite que el cursor cambie cuando pase sobre la imagen.*/
+  /*filter: invert(1); Este filtro cambia el color de blanco a negro y viceversa*/
 }
 
-@media screen and (min-width: 800px) {
-    .toggle-menu{
-        display:none;
-    }   
+@media screen and (min-width: 1000px) {
+  .toggle-menu {
+    display: none;
+  }
 }
 
-.navv{
-    width: 100%;
-    
+.navv {
+  width: 100%;
 }
 
 /*Esta es una clase que creamos, que se llama --show que depende del menu
 con esta buscaremos que el menu se muestre cuando programemos desde javascript el contenedor que contiene
 la imagen del menu*/
 .main-menu--show {
-    font-size: 1em;
-    list-style: none; /*Esto es para quitar el estilo a las biñetas*/
-    margin: 0;
-    display:flex; /*Përmite que los elementos sean manipulables (Cambiar de columna a fila, entre otros), recordar que son los elementos que estan dentro del menu*/
-    flex-direction: column; /*cambia la ubicación de los elementos a columna*/
-    align-items: center; /*Centra los elementos del menu*/
-    background-color: transparent; /*#5b73a5;*/
-    /*Le agregamos una transicion al transform para que tenga la animación mientras aparece.*/
-    transition: transform 0.3s;
-    transform: traslateY(0%); /*Este traslate lo que indica es que el menu va a quedar en la posición por defecto, se va a ver el menu.*/
+  font-size: 1em;
+  list-style: none; /*Esto es para quitar el estilo a las biñetas*/
+  margin: 0;
+  display: flex; /*Përmite que los elementos sean manipulables (Cambiar de columna a fila, entre otros), recordar que son los elementos que estan dentro del menu*/
+  flex-direction: column; /*cambia la ubicación de los elementos a columna*/
+  align-items: center; /*Centra los elementos del menu*/
+  background-color: transparent; /*#5b73a5;*/
+  /*Le agregamos una transicion al transform para que tenga la animación mientras aparece.*/
+  transition: transform 0.3s;
+  transform: traslateY(
+    0%
+  ); /*Este traslate lo que indica es que el menu va a quedar en la posición por defecto, se va a ver el menu.*/
 }
-
 
 .main-menu {
-    list-style: none; /*Esto es para quitar el estilo a las biñetas*/
-    margin: 0;
-    font-size: 1em;
-    display:flex; /*Përmite que los elementos sean manipulables (Cambiar de columna a fila, entre otros), recordar que son los elementos que estan dentro del menu*/
-    flex-direction: row; /*cambia la ubicación de los elementos a columna*/
-    align-items: center; /*Centra los elementos del menu*/
-    background-color: transparent;
-    /*Le agregamos una transicion al transform para que tenga la animación mientras se esconde.*/
-    transition: transform 0.3s;
-    /*Esta parte es para ocultar el menu si no se a presionado la imagen del menu
+  list-style: none; /*Esto es para quitar el estilo a las biñetas*/
+  margin: 0;
+  font-size: 1em;
+  display: flex; /*Përmite que los elementos sean manipulables (Cambiar de columna a fila, entre otros), recordar que son los elementos que estan dentro del menu*/
+  flex-direction: row; /*cambia la ubicación de los elementos a columna*/
+  align-items: center; /*Centra los elementos del menu*/
+  background-color: transparent;
+  /*Le agregamos una transicion al transform para que tenga la animación mientras se esconde.*/
+  transition: transform 0.3s;
+  /*Esta parte es para ocultar el menu si no se a presionado la imagen del menu
     por tal motivo, trasladamos la imagena -100 para que se oculte y no se vea en la pantalla.*/
-    transform: translateY(-200%);
+  transform: translateY(-200%);
 }
 
-
-
-@media screen and (min-width: 800px) {
-    .main-menu{ 
-        font-size: 1.3em;
-        transform: translateY(0%);
-        justify-content: end !important; /*Para alinear contenidos.*/
-    }
-    .main-menu--show{
-        font-size: 1.3em;
-        /*Cambiamos la ubicación de los elementos a fila, cuando la pantalla cambia sus dimensiones.*/
-        flex-direction: row;
-        justify-content: end;
-    }
-    .name{
-        font-size: 1.3em;
-    }
+@media screen and (min-width: 1000px) {
+  .main-menu {
+    font-size: 1.3em;
+    transform: translateY(0%);
+    justify-content: end !important; /*Para alinear contenidos.*/
+  }
+  .main-menu--show {
+    font-size: 1.3em;
+    /*Cambiamos la ubicación de los elementos a fila, cuando la pantalla cambia sus dimensiones.*/
+    flex-direction: row;
+    justify-content: end;
+  }
+  .name {
+    font-size: 1.3em;
+  }
 }
 
-.main-menu_item{
-    padding: 1em; /*Recordar que un 1em son 16px o la proporcion al contenedor, separamos los elementos li*/
+.main-menu_item {
+  padding: 1em; /*Recordar que un 1em son 16px o la proporcion al contenedor, separamos los elementos li*/
 }
 
 .main-menu_link {
-    color: white;
-    text-transform: uppercase; /*Pasar a mayusculas las letras*/
-    text-decoration: none; /*Esto es para quitar el underline que tiene la etiqueta a*/
+  color: white;
+  text-transform: uppercase; /*Pasar a mayusculas las letras*/
+  text-decoration: none; /*Esto es para quitar el underline que tiene la etiqueta a*/
 }
 
-.name{
-    position: absolute; /*Para posicionar el texto sobre la pantalla*/
-    text-decoration: none;
-    z-index: 1; /*Para superponer algun elemento sobre algun contenedor u elemento.*/
-    color:white;
-    text-transform: uppercase;
-    padding: 1em;
-    left: 1.5em; /*Posicionar el texto desde la izquierda del contenedor*/
-    font-weight: 700; /*Pära aumentar el grosor de la letra*/
-    
+.name {
+  position: absolute; /*Para posicionar el texto sobre la pantalla*/
+  text-decoration: none;
+  z-index: 1; /*Para superponer algun elemento sobre algun contenedor u elemento.*/
+  color: white;
+  text-transform: uppercase;
+  padding: 1em;
+  left: 1.5em; /*Posicionar el texto desde la izquierda del contenedor*/
+  font-weight: 700; /*Pära aumentar el grosor de la letra*/
 }
 
-.main-nav{
-    padding: 2em 8em 2em 8em;
+.main-nav {
+  padding: 2em 8em 2em 8em;
 }
-
-

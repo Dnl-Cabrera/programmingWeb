@@ -1,32 +1,31 @@
-.section{
-    width: 100%;
-    position:static;
+.section {
+  width: 100%;
+  position: static;
 }
-.wrapper-section{
-    width: 100%;
-    position:static; /*Static es para mantener las dimensiones del contenedor en la pagina.*/
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(100%,1fr));
-    color:black;
+.wrapper-section {
+  width: 100%;
+  position: static; /*Static es para mantener las dimensiones del contenedor en la pagina.*/
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  color: black;
 }
 
 @media screen and (min-width: 1000px) {
-    .wrapper-section{
-        grid-template-columns: repeat(auto-fill,minmax(50%,1fr));
-    }
+  .wrapper-section {
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+  }
 }
-.fila1{
-    padding: 0em 4em 0em 4em;
-    color:white;
+.fila1 {
+  padding: 5em 4em 0em 4em;
+  color: white;
 }
-.fila1 h1{
-    font-size: 2.4em;
+.fila1 h1 {
+  font-size: 2.4em;
 }
-.fila1 p{
-    font-size: 1.2em;
+.fila1 p {
+  font-size: 1.2em;
 }
-.fila2{
-    height: 100%;
-    width: 100%;
-    
+.fila2 {
+  height: 100%;
+  width: 100%;
 }
