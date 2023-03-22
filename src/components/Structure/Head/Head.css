@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  width: 100%;
   background-color: #333 !important;
   font-family: sans-serif;
 }
@@ -15,14 +16,24 @@ img {
   cursor: pointer; /*Esta propiedad permite que el cursor cambie cuando pase sobre la imagen.*/
   /*filter: invert(1); Este filtro cambia el color de blanco a negro y viceversa*/
 }
+.saltoLinea{
+  display: block;
+}
 
 @media screen and (min-width: 1000px) {
   .toggle-menu {
     display: none;
   }
+  .saltoLinea{
+    display:inline-block;
+  }
 }
 
-.navv {
+.navv{
+  width: 100%;
+}
+
+.nav-father{
   width: 100%;
 }
 
@@ -57,6 +68,9 @@ la imagen del menu*/
   /*Esta parte es para ocultar el menu si no se a presionado la imagen del menu
     por tal motivo, trasladamos la imagena -100 para que se oculte y no se vea en la pantalla.*/
   transform: translateY(-200%);
+  font-size: 0px; /*Esto es para que la letra sea pequeña y no amplifique el tamaño de la ventana*/
+  /*la siguiente linea es para que se ajuste el background color cuando se disminuya la pantalla.*/
+  height: 4rem;
 }
 
 @media screen and (min-width: 1000px) {
@@ -76,8 +90,8 @@ la imagen del menu*/
   }
 }
 
-.main-menu_item {
-  padding: 1em; /*Recordar que un 1em son 16px o la proporcion al contenedor, separamos los elementos li*/
+.menu_item {
+  padding: 1em 1em 1em 1em; /*Recordar que un 1em son 16px o la proporcion al contenedor, separamos los elementos li*/
 }
 
 .main-menu_link {

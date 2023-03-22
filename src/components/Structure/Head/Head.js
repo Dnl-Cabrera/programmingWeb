@@ -29,28 +29,28 @@ class Head extends React.Component {
                 <img src={imagenMenu} alt="" />
               </div>
               <a href="index.html" class="name">
-                <span>Autonomous Education Web</span>
+                Autonomous <span className="saltoLinea"></span>Education Web
               </a>
               <div class="navv">
                 <ul
                   class={this.state.mainMenu ? "main-menu" : "main-menu--show"}
                 >
-                  <li class="main-menu_item">
+                  <li class="menu_item">
                     <a href="Home.html" class="main-menu_link">
                       Home
                     </a>
                   </li>
-                  <li class="main-menu_item">
+                  <li class="menu_item">
                     <a href="about.html" class="main-menu_link">
                       Grados
                     </a>
                   </li>
-                  <li class="main-menu_item">
+                  <li class="menu_item">
                     <a href="Course.html" class="main-menu_link">
                       Cursos
                     </a>
                   </li>
-                  <li class="main-menu_item">
+                  <li class="menu_item">
                     <a href="ContacUs.html" class="main-menu_link">
                       Calificaciones
                     </a>

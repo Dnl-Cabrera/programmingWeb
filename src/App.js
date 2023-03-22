@@ -3,13 +3,15 @@ import React from "react"
 import "./App.css"
 //import template
 import Home from "./components/Template/Home/Home";
+import Grade from "./components/Template/Grade/Grade";
 
 class App extends React.Component{
 
   render(){
     return(
       <div>
-        <Home/>
+       {/* <Home/>*/ }
+       <Grade/>
       </div>
     )
     
