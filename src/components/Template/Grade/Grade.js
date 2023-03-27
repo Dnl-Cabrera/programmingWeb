@@ -2,14 +2,16 @@ import React from "react";
 //import components
 import Head from "../../Structure/Head/Head";
 import Footer from "../../Structure/Footer/Footer";
-import Cards from "../../Structure/Cards/Cards";
+//import Cards from "../../Structure/Cards/Cards";
+import Tweet from "../../Structure/Tweet/Tweet";
 //css
 import "./Grade.css"
 //import images
-import math from '../../../images/math.jpg'
-import physics from '../../../images/physics.jpg'
-import code from '../../../images/code.jpg'
+//import math from '../../../images/math.jpg'
+//import physics from '../../../images/physics.jpg'
+import inform from '../../../images/code.jpg'
 import robot from '../../../images/robot.jpg'
+import binary from '../../../images/binary.jpg'
 
 class Grade extends React.Component {
 
@@ -17,7 +19,7 @@ class Grade extends React.Component {
         super(props);
 
         this.state = {
-            imge: [math,physics,code,robot],
+            imge: [binary,inform,inform,robot],
             titlee: ["1003","804","805","Centro Interes 6"],
             descripp: ["Contenido de programación",
             "Contenido de informatica",
@@ -35,7 +37,8 @@ class Grade extends React.Component {
                 </div>
 
                 <div class="section">
-                    <Cards title={this.state.titlee} img={this.state.imge} descrip={this.state.descripp}/>
+                    {/*<Cards title={this.state.titlee} img={this.state.imge} descrip={this.state.descripp}/>*/}
+                    <Tweet/>
                 </div>
 
                 <div className="footer">

@@ -1,0 +1,29 @@
+.textArea{
+    resize: none; /*Ocultar la opción para redimensionar*/
+    overflow:hidden; /*Ocultar la opción de la barra deslizante cuando el campo de texto crece.*/
+}
+.mb-3{
+    color:#5b73a5;
+}
+.contenedor-textArea{
+    background-color: rgb(241, 243, 244);
+}
+
+.box-textArea-feature{
+    margin-top: -1em;
+}
+
+.botones-icon{
+    font-size: 1.6em;
+    padding-left: 1.1%;
+}
+.botones-icon:hover{
+    color:black;
+    font-size: 1.7em;
+    cursor:pointer
+}
+.botones{
+    background: none;
+    border: 0;
+    color: inherit;
+}

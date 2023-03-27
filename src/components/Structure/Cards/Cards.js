@@ -9,11 +9,6 @@ import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './Cards.css'
-//images
-import math from '../../../images/math.jpg'
-import physics from '../../../images/physics.jpg'
-import code from '../../../images/code.jpg'
-import robot from '../../../images/robot.jpg'
 
 
 class Cards extends React.Component{
