@@ -99,7 +99,6 @@ class Post extends React.Component {
                                             </div>
                                         </div>
                                         <div className="box-textArea-feature d-flex justify-content-end">
-                                            <Button className="botones" variant="outlined">Publicar</Button>
                                             <Button className="botones me-1" variant="outlined">
                                                 <span className="likeText">Me gusta</span><AiFillHeart className="botones-icon d-flex justify-content-center" />
                                             </Button>
