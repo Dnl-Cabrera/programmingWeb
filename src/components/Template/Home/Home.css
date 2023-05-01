@@ -1,3 +1,7 @@
+.HomePage{
+    box-sizing: border-box !important;
+    width: 100%;
+}
 .nav-padre{
     position:static;
     width: 100%;

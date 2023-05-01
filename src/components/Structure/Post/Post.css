@@ -1,10 +1,6 @@
 .mb-3{
     color:#5b73a5;
 }
-.tweet{
-    width: 100%;
-}
-
 .publicar{
     color:#5b73a5;
     border: 1px solid;
@@ -17,30 +13,28 @@
     width: 100%;
 }
 
-.divEditable:empty:not(:focus):before {
-	content: attr(data-text);
-    color: #999999;
-    cursor: text;
-    background: rgb(241, 243, 244);
-    border-color:red !important;
-    position:static;
-    z-index: 10;
+.post{
+    width: 100%;
 }
 
 .botones-icon{
     font-size: 1.6em;
-    padding-left: 1.1%;
-    margin-top: 30%;
 }
 .botones-icon:hover{
     color:black;
     font-size: 1.7em;
     cursor:pointer
 }
+
 .botones{
-    background: none;
-    border: 0;
-    color: inherit;
+    color:#5b73a5;
+    border: 1px solid;
+    float:right;
+    font-weight: bold;
+}
+
+.box-textArea-feature{
+    margin-top: 1.5em;
 }
 
 .imageProfile{
@@ -53,4 +47,25 @@
 
 .boxPost{
     display: flex;
+}
+
+.nameDate span{
+    display: block;
+}
+.nameUser{
+    font-size: 1.3em;
+    margin-bottom: -0.3em;
+    font-weight: bold;
+}
+.datePost{
+    font-size: 0.8em;
+    font-style:italic;
+}
+
+.containerDateUser{
+    margin-bottom: -1.1em;
+}
+
+.box-textArea{
+    margin-bottom: -1em;
 }

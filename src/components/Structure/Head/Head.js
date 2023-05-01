@@ -1,4 +1,7 @@
 import React from "react";
+
+import { Link } from 'react-router-dom';
+
 import "./Head.css";
 import imagenMenu from "../../../images/menu.png";
 
@@ -36,30 +39,31 @@ class Head extends React.Component {
                   class={this.state.mainMenu ? "main-menu" : "main-menu--show"}
                 >
                   <li class="menu_item">
-                    <a href="Home.html" class="main-menu_link">
-                      Home
-                    </a>
+                    <Link to="/" className="main-menu_link" >
+                    Home
+                    </Link>
                   </li>
                   <li class="menu_item">
-                    <a href="about.html" class="main-menu_link">
-                      Grados
-                    </a>
+                  <Link to="/Grade" className="main-menu_link" >
+                    Grade
+                    </Link>
                   </li>
                   <li class="menu_item">
-                    <a href="Course.html" class="main-menu_link">
-                      Cursos
-                    </a>
+                  <Link to="/Cursos" className="main-menu_link" >
+                    Cursos
+                    </Link>
                   </li>
                   <li class="menu_item">
-                    <a href="ContacUs.html" class="main-menu_link">
-                      Calificaciones
-                    </a>
+                  <Link to="/MenuTeacher" className="main-menu_link" >
+                    Iniciar sesión
+                    </Link>
                   </li>
                 </ul>
               </div>
             </nav>
           </header>
         </div>
+        
       </div>
     );
   }

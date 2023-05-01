@@ -3,7 +3,7 @@ import React from "react";
 import Head from "../../Structure/Head/Head";
 import Footer from "../../Structure/Footer/Footer";
 //import Cards from "../../Structure/Cards/Cards";
-import Tweet from "../../Structure/Tweet/Tweet";
+//import Tweet from "../../Structure/Tweet/Tweet";
 //css
 import "./Grade.css"
 //import images
@@ -12,6 +12,7 @@ import "./Grade.css"
 import inform from '../../../images/code.jpg'
 import robot from '../../../images/robot.jpg'
 import binary from '../../../images/binary.jpg'
+import Cards from "../../Structure/Cards/Cards";
 
 class Grade extends React.Component {
 
@@ -37,8 +38,9 @@ class Grade extends React.Component {
                 </div>
 
                 <div class="section">
-                    {/*<Cards title={this.state.titlee} img={this.state.imge} descrip={this.state.descripp}/>*/}
-                    <Tweet/>
+                    <Cards title={this.state.titlee} img={this.state.imge} descrip={this.state.descripp}/>
+                    
+                    
                 </div>
 
                 <div className="footer">

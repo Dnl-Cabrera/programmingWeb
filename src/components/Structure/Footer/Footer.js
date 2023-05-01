@@ -10,8 +10,8 @@ class Footer extends React.Component {
     render(){
         return(
             <div>
-                <div class="wrapper">
-                    <div class="item1">
+                <div className="wrapper">
+                    <div className="item1">
                         <ul>
                             <li Style="padding-bottom:1.5%"><strong Style="font-size:1.3em">Creado por:</strong></li>
                             <li>Carlos Eduardo Cabrera Ardila</li>
@@ -19,21 +19,21 @@ class Footer extends React.Component {
                             <li Style="font-style: italic; ">Master en Ingenieria - Automatización Industrial de la Universidad Nacional de Colombia Sede Bogotá</li>
                         </ul>
                     </div>
-                    <div class="item2">
+                    <div className="item2">
                         <ul>
                             <li Style="padding-bottom:4%"><strong Style="font-size:1.3em">Redes:</strong></li>
                             <li>
-                                <a href=""><FaFacebook class="face"/></a>
-                                <a href=""><FaLinkedin class="linke"/></a>
-                                <a href=""><FaGithub class="Github"/></a>
+                                <a href=" "><FaFacebook className="face"/></a>
+                                <a href=" "><FaLinkedin className="linke"/></a>
+                                <a href=" "><FaGithub className="Github"/></a>
                             </li>
                         </ul>
                     </div>
-                    <div class="item3">
+                    <div className="item3">
                         <ul>
-                            <li class="i1" Style="padding-bottom:1.5%"><strong Style="font-size:1.3em">Contacto:</strong></li>
-                            <li><div><TfiEmail class="email"/><p Style="margin-top:-1%;">ccabreraa@unal.edu.co</p></div></li>
-                            <li><div><SlPhone class="phone"/><p Style="margin-top:-1%;">304 646 XXXX</p></div></li>
+                            <li className="i1" Style="padding-bottom:1.5%"><strong Style="font-size:1.3em">Contacto:</strong></li>
+                            <li><div><TfiEmail className="email"/><p Style="margin-top:-1%;">ccabreraa@unal.edu.co</p></div></li>
+                            <li><div><SlPhone className="phone"/><p Style="margin-top:-1%;">304 646 XXXX</p></div></li>
                         </ul>
                     </div>
                 </div>

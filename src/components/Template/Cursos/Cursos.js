@@ -1,16 +1,17 @@
 import React from "react";
-//React components
+//import components
 import Head from "../../Structure/Head/Head";
-import Section from "../../Structure/Section/Section";
-import Cards from "../../Structure/Cards/Cards";
 import Footer from "../../Structure/Footer/Footer";
-//import images
+import Cards from "../../Structure/Cards/Cards";
+
 import math from '../../../images/math.jpg'
 import physics from '../../../images/physics.jpg'
 import code from '../../../images/code.jpg'
 import robot from '../../../images/robot.jpg'
 
-class Home extends React.Component{
+import "./Cursos.css"
+
+class Grade extends React.Component {
 
     constructor(props) {
         super(props);
@@ -26,18 +27,21 @@ class Home extends React.Component{
       }
 
     render(){
+
         return(
-            <div className="HomePage">
-                <div class="background">
-                <div class="nav-padre">
+            <div>
+                <div className="head">
                     <Head/>
-                    <Section/>
+                </div>
+
+                <div class="section">
                     <Cards img={this.state.imge} title={this.state.titlee} descrip={this.state.descripp}/>
-                    <div class="footer-padre">
+                </div>
+
+                <div className="footer">
                     <Footer/>
-                    </div>
                 </div>
-                </div>
+                
             </div>
         )
     }
@@ -45,4 +49,4 @@ class Home extends React.Component{
 
 }
 
-export default Home;
+export default Grade;

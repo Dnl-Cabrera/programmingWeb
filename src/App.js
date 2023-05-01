@@ -1,9 +1,11 @@
 import React from "react"
 //css
 import "./App.css"
+
+import {BrowserRouter} from "react-router-dom"
+
 //import template
-import Home from "./components/Template/Home/Home";
-import Grade from "./components/Template/Grade/Grade";
+import Main from "./components/Structure/Main/Main";
 
 class App extends React.Component{
 
@@ -11,7 +13,10 @@ class App extends React.Component{
     return(
       <div>
        {/* <Grade/>*/ }
-       <Grade/>
+       <BrowserRouter>
+        <Main/>
+       </BrowserRouter>
+       
       </div>
     )
     

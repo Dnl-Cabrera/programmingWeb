@@ -1,9 +1,8 @@
 import React from "react";
-import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import FloatingLabel from 'react-bootstrap/FloatingLabel';
+import Button from 'react-bootstrap/Button';
 
 import {BiBold,BiItalic,BiUnderline} from 'react-icons/bi' //Agregamos libreria para importar icons
 
@@ -16,116 +15,103 @@ class Tweet extends React.Component{
     constructor(){
         super();
         this.state = {
-            texto:'',
+            message:'',
         };
     }
-    
-    /*Se crea una función campoText, que detecta un evento en el DOM*/
-    campoText = (e) => {
-        /*Con e podemos acceder a todas las caracteristicas de la etiqueta a la que estamos modificando.*/
-        console.log(e.target);//En esta linea accedemos al dom de la etiqueta que se esta modificando. Esta etiqueta esta asociada con el evento de la etiqueta que llama la función
-        e.target.style='height:auto'; //Accedemos al style del DOM que esta siendo modificado. con auto, ajustamos el campo de texto a la cantidad de texto que tenga.
-        e.target.style='height:'+e.target.scrollHeight+'px;'; //modificamos el height segun el tamaño del scroll.
-        console.log(e.target.value.length);
 
-        const seleccion=window.getSelection().toString();
-        console.log(seleccion);
-    }
-    /*Función para agregar el valor*/
-    handleTextoChange = (e) => {
-        /*Estamos actualizando el estado, al valor del campo de texto */
-        this.setState({
-            texto:e.target.value,
-        });
-        //console.log(this.state.texto);
-    }
-
-    negrita = (e) => {
-        //preventDefault es para que no se recargue la pagina con el boton.
-        e.preventDefault();
-        // Obtener la sección de texto que selecciona el cursos
-        const seleccion=window.getSelection().toString();
-        if(seleccion.length>0){
-            /*
-            const inicio=this.state.texto.indexOf(seleccion);
-            // Obtener el índice final de la selección
-            const fin = inicio + seleccion.length;
-            // Aplicar el estilo de negrita a la selección
-            const textoConNegrita =
-            this.state.texto.substring(0, inicio) +
-            "<b>" +
-            seleccion +
-            "</b>" +
-            this.state.texto.substring(fin);
-            this.setState({
-                texto:textoConNegrita,
-            })
-            console.log(this.state.texto)
-            */
-            const textarea = document.getElementById('myTextarea');
-            const startIndex = textarea.selectionStart;
-            const endIndex = textarea.selectionEnd;
-            const selectedText = textarea.value.slice(startIndex, endIndex);
-            const newText = textarea.value.slice(0, startIndex) + '<b>' + selectedText + '</b>' + textarea.value.slice(endIndex);
-            this.setState({
-                texto:newText,
-            })
-            console.log(this.state.texto) 
+    formato = (etiqueta) =>{
+        const selection = window.getSelection();
+       
+        const selectedText = selection.toString();
+        //console.log(selectedText)
+        //console.log(selectedText.length)
+        //Preguntamos si tiene caracteres la selección.
+        if(selectedText.length === 0){
+            return;
         }
+        else{
+            const range = selection.getRangeAt(0);
+            //commonAncestorContainer Permite acceder a todos los padres nodos que tenga el rango seleccionado.
+            //.parentNode permite acceder al primer padre del objeto seleccionado.
+            // si llegara a colocar mas .parentNode accederia al padre que le sigue, y asi sucesivamente.
+            const padreNodo = range.commonAncestorContainer.parentNode;
+            //console.log(padreNodo.nodeName)
+
+            if(padreNodo.nodeName === etiqueta){
+                //replaceWith permite reemplazar una etiqueta , ejemplo: <div><strong></strong></div> me permite cambiar strong por el que quiera.
+                //... es desglozar un vector es decir tenemos let array=[1,2,3] los tres puntosdesglozarian el vector por ende pasaria de un vector a
+                // numeros por separado 1 2 3
+                //extractContents() lo que hace es que toma el valor de una etiqueta y lo guarda en DocumentFragment, el cual no hace parte del DOM,
+                //pero queda almacenado en documentFragment y lo elimina del DOM.
+                //childNodes, toma todos los nodos (etiquetas) que estan en el rango, que se extragenron, sin embargo, por el extractContents se eliminan del DOM.
+                //Apesar que lo coloco en el console.log, se ejecuta la acción en el DOM.
+                console.log(padreNodo.replaceWith(...range.extractContents().childNodes));
+            }
+            else{
+                const tag = document.createElement(etiqueta);
+                //document.createTextNode obtiene eltexto de un nodo sin las etiquetas.
+                //bold.appendChild crea un hijo dentro de la etiqueta strong, en este caso coloca solo el texto de selectedText
+                tag.appendChild(document.createTextNode(selectedText));
+                range.deleteContents();
+                range.insertNode(tag);
+            }
+            selection.removeAllRanges();
+        }
+    }
+
+    negrita = (e) =>{
+        e.preventDefault();
+        this.formato("STRONG");
         
+    }
+
+    cursiva = (e) =>{
+        e.preventDefault();
+        this.formato("I");
+    }
+
+    subrayado = (e) =>{
+        e.preventDefault();
+        this.formato("U");
     }
 
     render(){
         return(
-            <div>
                 <div className="tweet">
-                    <Form>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Container>
-                                <Row>
-                                    <Col>
-                                        <img src={imagen} alt="asdasd"/>
-                                    </Col>
-                                    <Col>
-                                        <div className="contenedor-textArea">
-                                            <div className="box-textArea">
-                                            <Form.Group controlId="myTextarea">
-                                                <FloatingLabel
-                                                    controlId="floatingInput"
-                                                    label="Email address"
-                                                    className="mb-3"
-                                                >
-                                                    {/*onInput es un evento que detecta cualquier cambio en un input.*/}
-                                                    <Form.Control className="textArea" value={this.state.texto} onChange={this.handleTextoChange}  as="textarea" onInput={this.campoText} rows="1" cols="70" placeholder="Leave a comment here"/> 
-                                                    
-                                                </FloatingLabel>
-                                                </Form.Group>
-                                            </div>
-                                            <div className="box-textArea-feature">
-                                                <button onClick={this.negrita} className="botones">
-                                                    <BiBold className="botones-icon" />
-                                                </button>
-                                                <button className="botones">
-                                                    <BiItalic className="botones-icon"/>
-                                                </button>
-                                                <button className="botones">
-                                                    <BiUnderline className="botones-icon"/>
-                                                </button>
-                                            </div>
+                    
+                    <Container className="mb-3">
+                        <Row className="p-2">
+                            <Col className="boxPost rounded" xs={12} lg={12}>
+                                <img src={imagen} className="imageProfile" alt=""/>
+                                <div className="contenedor-textArea rounded p-2">
+                                    <div className="box-textArea">
+                                        <div data-text="Ingrese su post" className="divEditable p-2 rounded" contenteditable="true">
+                                            
                                         </div>
-                                    </Col>
-                                    
-                                </Row>
-                                <Row>
-                                    
-                                </Row>
-                            </Container>
+                                    </div>
+                                    <div className="box-textArea-feature">
+                                        <button onClick={this.negrita} className="botones">
+                                            <BiBold className="botones-icon" />
+                                        </button>
+                                        <button className="botones">
+                                            <BiItalic onClick={this.cursiva} className="botones-icon"/>
+                                        </button>
+                                        <button className="botones">
+                                            <BiUnderline onClick={this.subrayado} className="botones-icon"/>
+                                        </button>
+                                        <Button className="publicar" variant="outlined">Publicar</Button>
+                                    </div>
+                                </div>
+                            </Col>
                             
-                        </Form.Group>
-                    </Form>
+                        </Row>
+                        <Row>
+                            
+                        </Row>
+                    </Container>
                     
                 </div>
-            </div>
+            
         )
     }
 
