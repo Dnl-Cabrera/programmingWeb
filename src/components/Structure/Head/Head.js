@@ -31,9 +31,12 @@ class Head extends React.Component {
                             mismo nos permitira delimitar el tamaño que tendra la imagen dentro del contendor.*/}
                 <img src={imagenMenu} alt="" />
               </div>
-              <a href="index.html" class="name">
-                Autonomous <span className="saltoLinea"></span>Education Web
+              <Link to="/">
+              <a href class="name">
+                
+                  Autonomous <span className="saltoLinea"></span>Education Web
               </a>
+              </Link>
               <div class="navv">
                 <ul
                   class={this.state.mainMenu ? "main-menu" : "main-menu--show"}
@@ -54,7 +57,7 @@ class Head extends React.Component {
                     </Link>
                   </li>
                   <li class="menu_item">
-                  <Link to="/MenuTeacher" className="main-menu_link" >
+                  <Link to="/Login" className="main-menu_link" >
                     Iniciar sesión
                     </Link>
                   </li>

@@ -4,6 +4,7 @@ import Home from '../../Template/Home/Home'
 import Grade from '../../Template/Grade/Grade'
 import Cursos from '../../Template/Cursos/Cursos'
 import MenuTeacher from '../../Template/MenuTeacher/MenuTeacher'
+import Login from '../../Template/Login/Login'
 
 const Main = () => (
   <main>
@@ -12,6 +13,7 @@ const Main = () => (
       <Route path="/Grade" component={Grade} />
       <Route path="/Cursos" component={Cursos} />
       <Route path="/MenuTeacher" component={MenuTeacher} />
+      <Route path="/Login" component={Login} />
     </Switch>
   </main>
 );
