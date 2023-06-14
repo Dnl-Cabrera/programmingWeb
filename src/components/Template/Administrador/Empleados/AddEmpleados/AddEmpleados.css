@@ -1,0 +1,13 @@
+.containerAddEmpleados{
+    color:white;
+}
+.containerChildAdd{
+    width: 50% !important;
+    height: 100% !important;
+    margin-bottom: 30%;
+}
+.containerChildAdd .mb-3{
+        text-align: left;
+        color:white !important;
+    
+}

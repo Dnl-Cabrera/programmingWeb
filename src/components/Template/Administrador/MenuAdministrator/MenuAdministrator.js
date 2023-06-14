@@ -2,12 +2,12 @@ import React from "react";
 //React components
 
 //Own components
-import SideBarAdministrator from "../../Structure/SideBarAdministrator/SideBarAdministrator";
+import SideBarAdministrator from "../../../Structure/SideBarAdministrator/SideBarAdministrator";
 
 //Css
 import "./MenuAdministrator.css"
 
-class MenuAdministrator extends React.Component{
+class QueryEmpleados extends React.Component{
 
     constructor(props) {
         super(props);
@@ -20,7 +20,9 @@ class MenuAdministrator extends React.Component{
     render(){
         return(
             <div className="MenuAdministrator">
-                <SideBarAdministrator/>
+                <SideBarAdministrator>
+                    <h1>Hola mundo</h1>
+                </SideBarAdministrator>
             </div>
         )
     }
@@ -28,4 +30,4 @@ class MenuAdministrator extends React.Component{
 
 }
 
-export default MenuAdministrator;
+export default QueryEmpleados;

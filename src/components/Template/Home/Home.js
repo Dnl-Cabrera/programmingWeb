@@ -30,6 +30,7 @@ class Home extends React.Component{
             <div className="HomePage">
                 <div class="background">
                 <div class="nav-padre">
+                    {localStorage.clear()}
                     <Head/>
                     <Section/>
                     <Cards img={this.state.imge} title={this.state.titlee} descrip={this.state.descripp}/>
