@@ -38,7 +38,7 @@ class QueryEmpleados extends React.Component {
             }
         }
 
-        fetch('http://localhost:8000/usuario/getusers', requestOptions)
+        fetch('http://drap.pythonanywhere.com/usuario/getusers', requestOptions)
             .then(response => {
                 //console.log(response)
                 if(response.ok){

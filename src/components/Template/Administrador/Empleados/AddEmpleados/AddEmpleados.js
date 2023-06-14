@@ -98,7 +98,7 @@ class AddEmpleados extends React.Component {
             };
 
             /*Estamos consumiendo la API mediante fetch, recibe la url y el requestOptions */
-            fetch('http://localhost:8000/usuario/createuser', requestOptions)
+            fetch('http://drap.pythonanywhere.com/usuario/createuser', requestOptions)
                 .then(response => {
                     /*With this if, our ask if response is ok, if is ok return the format .json */
                     if (response.ok) {
