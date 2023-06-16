@@ -101,7 +101,7 @@ class EditEmpleados extends React.Component {
         };
 
 
-        let url = 'http://drap.pythonanywhere.com/usuario/updateuser/' + this.state.ID_key
+        let url = 'https://drap.pythonanywhere.com/usuario/updateuser/' + this.state.ID_key
 
         /*Estamos consumiendo la API mediante fetch, recibe la url y el requestOptions */
         fetch(url, requestOptions)
@@ -147,7 +147,7 @@ class EditEmpleados extends React.Component {
             }
         }
 
-        let url = 'http://drap.pythonanywhere.com/usuario/onegetuser/' + this.state.ID_key
+        let url = 'https://drap.pythonanywhere.com/usuario/onegetuser/' + this.state.ID_key
 
         fetch(url, requestOptions)
             .then(response => {

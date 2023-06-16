@@ -98,12 +98,15 @@ class AddEmpleados extends React.Component {
             };
 
             /*Estamos consumiendo la API mediante fetch, recibe la url y el requestOptions */
-            fetch('http://drap.pythonanywhere.com/usuario/createuser', requestOptions)
+            fetch('https://drap.pythonanywhere.com/usuario/createuser', requestOptions)
                 .then(response => {
                     /*With this if, our ask if response is ok, if is ok return the format .json */
                     if (response.ok) {
                         alert("Usuario registrado");
                         response.json(); /*Indicamos que es formato json la respuesta que se espera */
+                    }
+                    else{
+                        alert("Error en el registro")
                     }
                     /*this is a promise which our informated that the API return error
                     Is necesary for catch.
